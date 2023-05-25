@@ -1,3 +1,5 @@
+from adafruit_epd.epd import Adafruit_EPD
+
 def makeSquare(display):
     # make red square
     display.rotation = 3

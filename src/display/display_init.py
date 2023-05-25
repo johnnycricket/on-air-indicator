@@ -25,4 +25,3 @@ def initDisplay():
         rst_pin=reset,
         busy_pin=busy
     )
-
