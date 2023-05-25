@@ -6,5 +6,8 @@ name = "pypi"
 [packages]
 adafruit-circuitpython-seesaw = "*"
 adafruit-circuitpython-ssd1680 = "*"
+adafruit-blinka = "*"
+adafruit-circuitpython-epd = "*"
+pillow = "*"
 
 [dev-packages]
