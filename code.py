@@ -2,8 +2,9 @@ import digitalio
 import busio
 import board 
 from adafruit_epd.epd import Adafruit_EPD
-from adafruit_epd.ssd1680 import Adafruit_SSD1680 
 from adafruit_seesaw import seesaw, rotaryio, g
+from display.display_init import initDisplay
+from display.display_service import makeSquare
 
 # init rotary knob pins
 i2c = board.I2C(
@@ -23,19 +24,6 @@ reset = digitalio.DigitalInOut(board.D4)
 busy = digitalio.DigitalInOut(board.D5)
 srcs = None
 
-display = Adafruit_SSD1680(
-    122,
-    250,
-    spi,
-    cs_pin=cs,
-    dc_pin=dc,
-    sramcs_pin=srcs,
-    rst_pin=reset,
-    busy_pin=busy
-)
+display = initDisplay()
 
-# make red square
-display.rotation = 3
-display.fill(Adafruit_EPD.WHITE)
-display.fill_rect(20,20,50,60, Adafruit_EPD.RED)
-display.display()
+makeSquare(display)
