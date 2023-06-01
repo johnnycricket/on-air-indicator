@@ -1,5 +1,6 @@
 from rainbowio import colorwheel
 from adafruit_seesaw import neopixel
+from rotary.rotary_color_enum import Color
 
 def init_neopixel(seesaw):
     return neopixel.NeoPixel(seesaw, 6, 1)

@@ -1,6 +1,5 @@
-import digitalio
 import board 
-from adafruit_seesaw import seesaw, rotaryio
+from adafruit_seesaw import seesaw, rotaryio, digitalio
 
 def init_rotary():
     i2c = board.STEMMA_I2C() 
@@ -12,4 +11,4 @@ def init_encoder(seesaw):
     return rotaryio.IncrementalEncoder(seesaw)
 
 def init_switch(seesaw):
-    return digitalio.DigitalInOut(24)
+    return digitalio.DigitalIO(seesaw, 24)

@@ -11,6 +11,10 @@ pixel = init_neopixel(rotary)
 # init eink pins
 # display = initDisplay()
 
+position = -encoder.position
+last_position = position
+color = 1
+
 while True:
     position = -encoder.position
 
@@ -18,6 +22,7 @@ while True:
         print(position)
 
         if switch.value:
+            switched = switch.value
             if position > last_position:
                 color += 1
             else:

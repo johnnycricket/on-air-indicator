@@ -11,7 +11,7 @@ def initDisplay():
     )
     cs = digitalio.DigitalInOut(board.RX)
     dc = digitalio.DigitalInOut(board.TX)
-    reset = digitalio.DigitalInOut(board.D4)
+    rst = digitalio.DigitalInOut(board.D4)
     busy = digitalio.DigitalInOut(board.D5)
     srcs = None
 
@@ -22,6 +22,6 @@ def initDisplay():
         cs_pin=cs,
         dc_pin=dc,
         sramcs_pin=srcs,
-        rst_pin=reset,
+        rst_pin=rst,
         busy_pin=busy
     )
