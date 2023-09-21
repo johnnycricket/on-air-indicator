@@ -25,3 +25,17 @@ def initDisplay():
         rst_pin=rst,
         busy_pin=busy
     )
+
+def displayOnAir():
+    # this needs to:
+    # clear screen, 
+    # load image, 
+    # display the on air bmp
+    return 'hi'
+
+def displayFree():
+    return 'hi'
+
+def displayDisplayDebug():
+    FILENAME = ""
+    return 'hi'
